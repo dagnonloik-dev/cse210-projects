@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         string response = "yes";
-        while(response == "yes")
+        while(response.ToLower() == "yes")
         {
             Random randomGenerator = new Random();
             int randomNumber = randomGenerator.Next(1,101);
