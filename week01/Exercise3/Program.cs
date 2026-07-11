@@ -10,7 +10,7 @@ class Program
             Random randomGenerator = new Random();
             int randomNumber = randomGenerator.Next(1,101);
             
-            Console.WriteLine($"What is the magic number? {randomNumber}");
+            Console.WriteLine($"What is the magic number?");
             int number = -1;
             int counter = 0;
 
