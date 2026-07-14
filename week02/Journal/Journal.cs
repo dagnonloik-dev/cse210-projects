@@ -14,6 +14,26 @@ public class Journal
         }
     }
 
+    public void SearchEntries(string keyword)
+    {
+        bool found = false;
+
+        foreach(JournalEntry entry in _entries)
+        {
+            if(entry._entry.ToLower().Contains(keyword.ToLower()) || entry._prompt.ToLower().Contains(keyword.ToLower())) 
+            {
+                entry.Display();
+                found = true;
+            }
+        }
+        if (!found)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"No entries found containing the keyword: {keyword}");
+            Console.WriteLine();
+        }
+    }
+
     public void SaveToFile(string filename)
     {
         using (StreamWriter outputWriter = new StreamWriter(filename))

@@ -28,7 +28,8 @@ class Program
                       "2. Display\n" +
                       "3. Load\n" +
                       "4. Save\n" +
-                      "5. Quit\n" +
+                      "5. Search\n" +
+                      "6. Quit\n" +
                       "What would you like to do? ";
 
             Random randomGenerator = new Random();
@@ -40,12 +41,13 @@ class Program
             if (choice == "1")
             {
                 JournalEntry entry = new JournalEntry();
+                string randomPrompt = journalEntries[randomNumber];
 
-                Console.WriteLine($"{journalEntries[randomNumber]}");
+                Console.WriteLine($"{randomPrompt}");
                 Console.Write("> ");
                 entry._entry = Console.ReadLine();
                 entry._date = DateTime.Now;
-                entry._prompt = journalEntries[randomNumber];
+                entry._prompt = randomPrompt;
 
                 journal._entries.Add(entry);
             }
@@ -57,7 +59,7 @@ class Program
                 }
                 else if(choice == "3")
                 {
-                    Console.Write("What is the filename? ");
+                    Console.WriteLine("What is the filename? ");
                     string filename = Console.ReadLine();
                     journal.LoadFromFile(filename);
                 }
@@ -69,8 +71,14 @@ class Program
                 }
                 else if(choice == "5")
                 {
+                    Console.Write("What is your keyword? ");
+                    string keyword = Console.ReadLine();
+                    journal.SearchEntries(keyword);
+                }
+                else if(choice == "6")
+                {
                     Console.WriteLine("Quitting the program...");
-                }   
+                }      
             }
                         
         }
