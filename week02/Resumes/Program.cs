@@ -20,6 +20,6 @@ class Program
         myResume._name = "John Smith";
         myResume._jobs.Add(job1);
         myResume._jobs.Add(job2);
-        myResume.Display();
+        myResume.DisplayJobs();
     }
 }
