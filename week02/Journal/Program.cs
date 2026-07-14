@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+// Exceeded required functionality by adding a search feature to the journal program.
+//  The user can now search for specific keywords in their journal entries, and the program will display any matching entries. 
+// If no matches are found, a message will be displayed indicating that no entries were found containing the keyword.
+
 class Program
 {
     static void Main(string[] args)
