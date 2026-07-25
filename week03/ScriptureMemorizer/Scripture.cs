@@ -26,7 +26,7 @@ public class Scripture
         {
             if (word.IsHidden())
             {
-                displayText += "____ ";
+                displayText += new string ('_', word.GetDisplayText().Length) + " ";
             }
             else
             {
