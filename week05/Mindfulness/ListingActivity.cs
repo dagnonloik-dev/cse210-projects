@@ -61,7 +61,7 @@ public class ListingActivity : Activity
     public List<string> GetListFromUser()
     {
         List<string> responses = new List<string>();
-        DateTime endTime = DateTime.Now.AddSeconds(30);
+        DateTime endTime = DateTime.Now.AddSeconds(GetActivityDuration());
         while (DateTime.Now < endTime)
         {
             Console.Write("> ");

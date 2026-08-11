@@ -10,7 +10,7 @@ public class BreathingActivity : Activity
     public void Run()
     {   
         DisplayStartingMessage();
-        ShowCountDown(24);
+        ShowCountDown(GetActivityDuration());
         DisplayEndingMessage();   
     }
 }
